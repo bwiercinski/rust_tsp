@@ -1,0 +1,9 @@
+[package]
+name = "rust_tsp"
+version = "0.1.0"
+authors = ["Bartłomiej Wierciński <bmwbartek1@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+num = "0.3.1"
+rand = "0.8.2"
