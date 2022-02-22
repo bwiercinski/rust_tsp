@@ -1,14 +1,9 @@
-#![feature(test)]
-
-extern crate test;
-
 pub mod ga;
 pub mod tsp;
 
 pub use ga::*;
-pub use tsp::*;
 use rand::*;
-
+pub use tsp::*;
 
 pub fn run_ga() {
     let tsp = TspCase::new(&[
@@ -61,15 +56,4 @@ pub fn run_ga() {
             println!("final {:?}", x);
             x
         });
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use test::Bencher;
-
-    #[bench]
-    fn bench_run_ga(b: &mut Bencher) {
-        b.iter(|| run_ga());
-    }
 }
